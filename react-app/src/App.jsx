@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import searchIcon from "./assets/search.svg";
 import MovieCard from "./MovieCard";
-const API_URL = "http://www.omdbapi.com?apikey=fbc6ecde";
+
+const API_URL = `http://www.omdbapi.com?apikey=${import.meta.env.VITE_API_KEY}`;
 
 function App() {
     const [movies, setMovies] = useState([]);
